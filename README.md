@@ -1,7 +1,8 @@
-# Solving Maximum Independent Set (MIS) problem with Julia
+# Solving the Maximum Independent Set (MIS) problem
 
-MIS is expressed as a linear programming problem and solve in Julia using the [JuMP](https://jump.dev) library.
+MIS can be expressed as a linear programming problem.
 
-TODO:
-
-- put it in docker, for guaranteed execution on all machines
+We demonstrate in `mis_julia.ipynb` how to solve the MIS in Julia using the
+[JuMP](https://jump.dev) library, while the script `mis_solver.py` uses the
+[ortools](https://developers.google.com/optimization) library to solves the MIS
+on the graph given in input.

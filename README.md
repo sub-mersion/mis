@@ -1,6 +1,7 @@
 # Combinatorial optimization problems
 
 ![MIS on a graph, from https://arxiv.org/pdf/2006.11190.pdf](image.png)
+(image from [arxiv:2006.11190]( https://arxiv.org/pdf/2006.11190.pdf))
 
 Two relevant combinatorial optimization problems are explored
 

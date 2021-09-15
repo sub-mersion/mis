@@ -18,6 +18,8 @@ problem. We do so and demonstrate in a Julia notebook how to use the JuMP
 library to solve the problem. A python script using or-tools is also available
 as a standalone solver.
 
+A simple Go CLI randomly samples the set of maximal independent sets of its input graph with a pool of workers to get the largest possible maximal independent set with a given sample budgets.
+
 ## Scheduling
 
 Scheduling is a constraint optimization problem, which can be solved by the
@@ -28,7 +30,7 @@ length of work and rest time spans.
 ## Todo
 
 - [ ] Constraints and custom rules from user input
-- [ ] Clone `mis` in go using goroutines, compare benchmarks
+- [X] Clone `mis` in go using goroutines, compare benchmarks
 
 ---
 

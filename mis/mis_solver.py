@@ -34,13 +34,13 @@ class ImpossibleEdgeErr(Exception):
         return f"impossible edge: ({self.i}, {self.j}) (max node label is {self.n-1})"
 
 
-def solve(args):
+def solve(args) -> None:
     """
     solve takes parsed args from the command line and try to solve the MIS on
     the given graph.
 
     Return:
-        a solution as a list of vertices if found, otherwise notify by a string.
+        nothing, but print out the solution to stdout, or notify by a string if infeasible.
     """
 
     solver = pywraplp.Solver.CreateSolver("SCIP")

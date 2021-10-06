@@ -6,7 +6,7 @@ problem using the ortools library.
 
 import json
 import sys
-from argparse import ArgumentParser
+from argparse import ArgumentParser, Namespace
 
 from ortools.linear_solver import pywraplp
 
@@ -34,7 +34,7 @@ class ImpossibleEdgeErr(Exception):
         return f"impossible edge: ({self.i}, {self.j}) (max node label is {self.n-1})"
 
 
-def solve(args) -> None:
+def solve(args: Namespace) -> None:
     """
     solve takes parsed args from the command line and try to solve the MIS on
     the given graph.
@@ -87,7 +87,7 @@ def solve(args) -> None:
         print("The problem does not have an optimal solution")
 
 
-def parse_file(filename):
+def parse_file(filename: str) -> tuple[int, list[tuple[int, int]]]:
     """
     parse_file parses graph file. The first line is expected to be an integer
     specifying n, the number of node of the graph, and following lines are edges
@@ -121,7 +121,7 @@ def parse_file(filename):
     return n, edges
 
 
-def parse_file_as_json(filename):
+def parse_file_as_json(filename: str) -> tuple[int, list[tuple[int, int]]]:
     """
     parse_file_as_json parse a graph given a json file.
 

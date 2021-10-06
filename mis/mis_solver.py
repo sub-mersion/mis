@@ -12,10 +12,10 @@ from ortools.linear_solver import pywraplp
 
 
 class NegativeNodeNumberErr(Exception):
-    def __init__(self, n):
+    def __init__(self, n) -> None:
         self.n = n
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"number of node is negative: {self.n}"
 
 
@@ -25,12 +25,12 @@ class ImpossibleEdgeErr(Exception):
     node, that is of index out of [0, n-1].
     """
 
-    def __init__(self, i, j, n):
+    def __init__(self, i, j, n) -> None:
         self.i = i
         self.j = j
         self.n = n
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"impossible edge: ({self.i}, {self.j}) (max node label is {self.n-1})"
 
 

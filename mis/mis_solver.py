@@ -4,8 +4,10 @@ This script solves a Maximum Indepent Set (MIS) problem as a linear programming
 problem using the ortools library.
 """
 
-import sys, json
+import json
+import sys
 from argparse import ArgumentParser
+
 from ortools.linear_solver import pywraplp
 
 
